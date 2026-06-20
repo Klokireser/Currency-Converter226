@@ -1,0 +1,16 @@
+
+git init
+
+echo "__pycache__/" > .gitignore
+echo "*.pyc" >> .gitignore
+echo "history.json" >> .gitignore
+echo ".vscode/" >> .gitignore
+
+git add .
+
+git commit -m "Initial commit: Currency Converter with GUI and history"
+
+git remote add origin https://github.com/Klokireser/Currency-Converter226.git
+
+git branch -M main
+git push -u origin main
