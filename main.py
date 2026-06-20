@@ -87,7 +87,7 @@ def convert():
         "result": result,
         "rate": rate
     }
-    history.insert(0, record)  # Новые записи сверху
+    history.insert(0, record)  
     save_history(history)
     update_tree()
 
@@ -118,7 +118,7 @@ window.geometry("700x550")
 window.configure(bg="#f4f6f8")
 window.resizable(False, False)
 
-tk.Label(window, text="💱 Конвертер валют",
+tk.Label(window, text=" Конвертер валют",
          font=("Arial", 18, "bold"), bg="#f4f6f8", fg="#2c3e50").pack(pady=10)
 
 input_frame = tk.Frame(window, bg="#f4f6f8")
@@ -139,7 +139,7 @@ combo_to.set("EUR")
 combo_to.grid(row=0, column=5, padx=5)
 
 
-btn_convert = tk.Button(window, text="🔄 Конвертировать", command=convert,
+btn_convert = tk.Button(window, text=" Конвертировать", command=convert,
                         bg="#3498db", fg="white", font=("Arial", 11, "bold"),
                         width=20, relief="flat", cursor="hand2")
 btn_convert.pack(pady=5)
@@ -149,7 +149,7 @@ label_result = tk.Label(window, text="Результат появится зде
                         font=("Arial", 12), bg="#f4f6f8", fg="#7f8c8d")
 label_result.pack(pady=10)
 
-tk.Label(window, text="📜 История конвертаций",
+tk.Label(window, text=" История конвертаций",
          font=("Arial", 12, "bold"), bg="#f4f6f8", fg="#2c3e50").pack(pady=(10, 5))
 
 columns = ("date", "from", "to", "rate")
